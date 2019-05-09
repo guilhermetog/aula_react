@@ -25748,7 +25748,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"componentes/Instacard.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"componentes/InstacardComment.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25757,6 +25757,127 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var InstacardComment =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(InstacardComment, _React$Component);
+
+  function InstacardComment() {
+    _classCallCheck(this, InstacardComment);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(InstacardComment).apply(this, arguments));
+  }
+
+  _createClass(InstacardComment, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement("div", {
+        style: {
+          display: "flex",
+          flexDirection: "column",
+          width: "100%",
+          height: "100%"
+        }
+      }, _react.default.createElement("div", {
+        style: {
+          flex: 3,
+          display: "flex",
+          flexDirection: "column"
+        }
+      }, _react.default.createElement("div", {
+        style: {
+          display: "flex",
+          flexBasis: "100px"
+        }
+      }, _react.default.createElement("div", {
+        style: {
+          flex: 1,
+          display: "flex",
+          flexDirection: "column"
+        }
+      }, _react.default.createElement("p", {
+        style: {
+          flex: 1
+        }
+      }, "Que cara gente fina!"), _react.default.createElement("p", {
+        style: {
+          flexBasis: "30px",
+          color: "#555"
+        }
+      }, "09/05/2019 - 08:45")), _react.default.createElement("div", {
+        style: {
+          flexBasis: "50px",
+          flexGrow: 0,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }
+      }, _react.default.createElement("i", {
+        class: "far fa-heart",
+        style: {
+          fontSize: 20,
+          color: "#999"
+        }
+      })))), _react.default.createElement("div", {
+        style: {
+          flexBasis: "60px",
+          display: "flex",
+          flexGrow: 0
+        }
+      }, _react.default.createElement("input", {
+        style: {
+          flex: 5
+        },
+        type: "text",
+        placeholder: "Adicionar um comentario..."
+      }), _react.default.createElement("div", {
+        style: {
+          flex: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }
+      }, "Publicar")));
+    }
+  }]);
+
+  return InstacardComment;
+}(_react.default.Component);
+
+var _default = InstacardComment;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"componentes/Instacard.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _InstacardComment = _interopRequireDefault(require("./InstacardComment"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25804,7 +25925,8 @@ function (_React$Component) {
           flex: 1,
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center"
+          alignItems: "center",
+          flexGrow: 0
         }
       }, _react.default.createElement("div", {
         style: {
@@ -25812,7 +25934,8 @@ function (_React$Component) {
           alignItems: "center",
           margin: "5px"
         }
-      }, _react.default.createElement("div", {
+      }, _react.default.createElement("img", {
+        src: "https://avatars2.githubusercontent.com/u/26307271?s=460&v=4",
         style: {
           backgroundColor: "black",
           width: "50px",
@@ -25827,10 +25950,13 @@ function (_React$Component) {
           display: "flex",
           alignItems: "center"
         }
-      }, "...")), _react.default.createElement("div", {
+      }, _react.default.createElement("i", {
+        className: "fas fa-ellipsis-h"
+      }))), _react.default.createElement("img", {
+        src: "https://avatars2.githubusercontent.com/u/18492592?s=460&v=4",
         style: {
           flex: 10,
-          backgroundColor: "green"
+          flexGrow: 0
         }
       }), _react.default.createElement("div", {
         style: {
@@ -25842,7 +25968,8 @@ function (_React$Component) {
         style: {
           flex: 2,
           display: "flex",
-          justifyContent: "space-between"
+          justifyContent: "space-between",
+          flexGrow: 0
         }
       }, _react.default.createElement("div", {
         style: {
@@ -25853,28 +25980,60 @@ function (_React$Component) {
           width: "50px",
           height: "50px",
           margin: "5px",
-          backgroundColor: "green"
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
         }
-      }), _react.default.createElement("div", {
+      }, _react.default.createElement("i", {
+        class: "far fa-heart",
+        style: {
+          fontSize: 35,
+          color: "#999"
+        }
+      })), _react.default.createElement("div", {
         style: {
           width: "50px",
           height: "50px",
           margin: "5px",
-          backgroundColor: "yellow"
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
         }
-      }), _react.default.createElement("div", {
+      }, _react.default.createElement("i", {
+        class: "far fa-comment",
+        style: {
+          fontSize: 35,
+          color: "#999"
+        }
+      })), _react.default.createElement("div", {
         style: {
           width: "50px",
           height: "50px",
           margin: "5px",
-          backgroundColor: "red"
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
         }
-      })), _react.default.createElement("div", null, _react.default.createElement("div", {
+      }, _react.default.createElement("i", {
+        class: "fas fa-external-link-alt",
+        style: {
+          fontSize: 35,
+          color: "#999"
+        }
+      }))), _react.default.createElement("div", {
         style: {
           width: "50px",
           height: "50px",
           margin: "5px",
-          backgroundColor: "blue"
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }
+      }, _react.default.createElement("i", {
+        class: "far fa-bookmark",
+        style: {
+          fontSize: 35,
+          color: "#999"
         }
       }))), _react.default.createElement("div", {
         style: {
@@ -25882,32 +26041,9 @@ function (_React$Component) {
         }
       }, _react.default.createElement("span", null, "3 curtidas")), _react.default.createElement("div", {
         style: {
-          flex: 3
+          flexBasis: 5
         }
-      }, _react.default.createElement("p", null, "ahuidaisuhdiasdhpasdhas asidhasivpoasscjp opij dopiavjadoip sopdi jsdoip jcpoi js poids opidsj dsopi jdsop ijds opjdsdsopij dospi jds poij d posdij sd pojsd posdj sdp oidsj dspo jds posdj "))), _react.default.createElement("div", {
-        style: {
-          flex: 3,
-          backgroundColor: "blue"
-        }
-      }), _react.default.createElement("div", {
-        style: {
-          flex: 2,
-          display: "flex"
-        }
-      }, _react.default.createElement("input", {
-        style: {
-          flex: 5
-        },
-        type: "text",
-        placeholder: "Adicionar um comentario..."
-      }), _react.default.createElement("div", {
-        style: {
-          flex: 1,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center"
-        }
-      }, "Publicar")));
+      }, _react.default.createElement("p", null, "ahuidaisuhdiasdhpasdhas asidhasivpoasscjp opij dopiavjadoip sopdi jsdoip jcpoi js poids opidsj dsopi jdsop ijds opjdsdsopij dospi jds poij d posdij sd pojsd posdj sdp oidsj dspo jds posdj ")), _react.default.createElement(_InstacardComment.default, null)));
     }
   }]);
 
@@ -25916,7 +26052,7 @@ function (_React$Component) {
 
 var _default = Instacard;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"componentes/App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./InstacardComment":"componentes/InstacardComment.js"}],"componentes/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -25927,6 +26063,8 @@ exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 
 var _Instacard = _interopRequireDefault(require("./Instacard"));
+
+var _InstacardComment = _interopRequireDefault(require("./InstacardComment"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25962,7 +26100,7 @@ function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_Instacard.default, null);
+      return _react.default.createElement(_InstacardComment.default, null);
     }
   }]);
 
@@ -25971,7 +26109,7 @@ function (_React$Component) {
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Instacard":"componentes/Instacard.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Instacard":"componentes/Instacard.js","./InstacardComment":"componentes/InstacardComment.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -26011,7 +26149,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64498" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58993" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
